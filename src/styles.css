@@ -1,0 +1,250 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+body{
+
+    background-image: url("/assets/img/background.jpg");
+    font-family: Brandon_reg;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+@font-face {
+    font-family: Brandon_bld;
+    src: url('/assets/fonts/brandon_blk-webfont.woff');
+}
+
+@font-face {
+    font-family: Brandon_reg;
+    src: url('/assets/fonts/brandon_reg-webfont.woff');
+}
+
+#listProfile{
+    width:900px;
+    background: #f8f8f8;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-datas{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.letter{
+    color:#ef4847;
+    position: relative;
+    top:0;
+    
+}
+.titleApp{
+    color:#d8d5d5;
+    font-family: Brandon_bld;
+    text-align: center;
+}
+.profile-div{
+    background: white;
+    box-shadow: 2px 2px 3px #696969;
+    padding: 10px;
+    margin:5;
+    color: #696969;
+
+    width: 30%;
+}
+.liseret{
+    background: #ef4847;
+    height: 15px;
+    width: 100%;
+}
+.div-search{
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.content-list{
+    text-align: center;
+    display: grid;
+    grid-row-gap: 1ch;
+    grid-template-columns: 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#wrap-profile{
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    min-height: 100vh;
+    z-index: 200;
+ 
+    width: 100%;
+    position: fixed; 
+    background-color:rgba(0, 0, 0, 0.9);
+}
+
+
+.ctrl{
+   
+    border: 1px solid #b4bbc2;
+    width: auto;
+    padding: 8px;
+}
+::placeholder{
+    color:#b4bbc2;
+}
+
+
+
+.content-profile{
+    padding:15px;
+
+}
+
+.skype a {
+ background-image: url('/assets/icons/skype.png');
+ width:50px;
+ height: 50px;
+ background-position: 0 0;
+ background-repeat: no-repeat;
+ padding: 15px;
+}
+.phone a {
+    background-image: url('/assets/icons/phone.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width:50px;
+    height: 50px;
+    padding: 15px;
+}
+.mail a {
+    background-image: url('/assets/icons/mail.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width:50px;
+    height:50px;
+    padding:15px;
+}
+.wrap-icon{
+    width: 100%;
+}
+img{
+    max-width: 100%;
+}
+
+.emptyProfile{
+    width: auto;
+    padding: 15px;
+    margin: 15px;
+    background: white;
+    box-shadow: 0px 0px 3px #696969;
+}
+
+
+
+.data-profile{
+    display: inline-block;
+    font-size: 0.8rem
+}
+.picture{
+    border-radius: 50% ;
+    border:solid 1px#ef4847;
+    padding: 6px;
+    vertical-align: top;
+    max-width: 100% ;
+}
+
+.grid{
+    position: relative;
+    display: grid;
+    grid-row-gap: 1ch;
+    background: #f8f8f9;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    width: 900px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.grid > div{
+    background: white;
+    padding: 5px
+}
+
+.grid > .profile-content{
+    background: white;
+    margin:0 15px;
+    box-shadow: 0px 0px 3px #696969;
+    color: #b4bbc2;
+}
+
+.wrap{
+    margin: 0 auto;
+    width: 900px;
+    background: #f8f8f9;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+#profile{
+    position: absolute;
+    z-index: 200;
+    top: 0;
+    width: 50%;
+    text-align: center;
+    background: #ffffff;
+    margin:0 25%;
+    border-radius:15px;
+    overflow: hidden; 
+}
+
+#alphabetical{
+    text-align: center
+}
+
+#alphabetical li{
+    list-style-type: none;
+    padding: 5px;
+    display: inline;
+}
+#alphabetical li a{
+    color:#ef4847;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+#alphabetical>li>a:hover{
+    text-decoration: underline;
+}
+
+@media  screen and (max-width:640px){
+    #alphabetical{
+        padding: 15px;
+    }
+    #alphabetical>li>a{
+        padding: 0 8px 0 0;
+    }
+    .grid{
+        grid-template-columns: 1fr;
+        width:auto;
+        padding: 5px;
+    }
+    .grid > div{
+
+        padding: 15px 
+   }
+   .wrap{
+        width: 90%;
+        border-radius: 15px;
+    }
+    .profile-content{
+        padding:5px;
+    }
+}

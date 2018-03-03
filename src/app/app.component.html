@@ -1,0 +1,46 @@
+<h1 class="titleApp">My Adress book</h1>
+<div class="wrap">
+  <div class="liseret"></div>
+  <div class="div-search">
+    <input [(ngModel)]="filterText.name" type="text" placeholder="SEARCH" class="ctrl" (keyup)="isEmpty(filterText.name)" />
+  </div>
+  <ul id="alphabetical">
+    <li *ngFor='let letter of letters()'>
+      <a href="#" (click)="filterLetter(letter)">{{letter}}</a>
+    </li>
+  </ul>
+  <div *ngIf="noProfile" class="emptyProfile">Aucun résultat</div>
+  <div class="grid">
+    <div *ngFor='let profile of listProfile | filterProfile:filterText.name as result' #someVar class="profile-content" (click)="getDatas(profile)">
+      <img src="/assets/icons/profile.png" class="picture" />
+      <div class="data-profile">
+        <p> {{profile.name |uppercase}}</p>
+        <p> {{profile.phone}}</p>
+        <p> {{profile.mail}}</p>
+      </div>
+    </div>
+  </div>
+  <div id="wrap-profile" *ngIf="selectedProfile"></div>
+  <div id="profile" *ngIf="selectedProfile">
+    <div class="liseret"> </div>
+    <div class="content-profile">
+      <img src="/assets/icons/profile.png" class="picture" />
+      <div class="data-profile">
+        <p> {{selectedProfile.name |uppercase}}</p>
+        <p> {{selectedProfile.phone}}</p>
+      </div>
+      <p class="wrap-icon">
+        <span class="skype">
+          <a></a>
+        </span>
+        <span class="phone">
+          <a></a>
+        </span>
+        <span class="mail">
+          <a></a>
+        </span>
+      </p>
+      <a (click)="closeProfile()">x Fermer</a>
+    </div>
+
+  </div>
